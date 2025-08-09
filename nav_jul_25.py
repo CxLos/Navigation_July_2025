@@ -69,11 +69,11 @@ df.columns = df.columns.str.strip()
 
 # Filtered df where 'Date of Activity:' is in May
 df["Date of Activity"] = pd.to_datetime(df["Date of Activity"], errors='coerce')
-df = df[df['Date of Activity'].dt.month == 6]
+df = df[df['Date of Activity'].dt.month == 7]
 
 # Get the reporting month:
-current_month = datetime(2025, 6, 1).strftime("%B")
-report_year = datetime(2025, 6, 1).year
+current_month = datetime(2025, 7, 1).strftime("%B")
+report_year = datetime(2025, 7, 1).year
 
 # Strip whitespace
 df.columns = df.columns.str.strip()
@@ -88,7 +88,7 @@ for col in df.select_dtypes(include='object').columns:
 # color_sequence = px.colors.qualitative.Plotly
 
 # -----------------------------------------------
-# print(df.head())
+print(df.head())
 # print('Total entries: ', len(df))
 # print('Column Names: \n', df.columns.tolist())
 # print('Column Names: \n', df1.columns)
@@ -2042,8 +2042,8 @@ if __name__ == '__main__':
 
 # Heroku Setup:
 # heroku login
-# heroku create nav-jan-2025
-# heroku git:remote -a nav-jan-2025
+# heroku create nav-jul-2025
+# heroku git:remote -a nav-jul-2025
 # git remote set-url heroku git@heroku.com:nav-jan-2025.git
 # git push heroku main
 
